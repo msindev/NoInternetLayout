@@ -20,10 +20,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
 
-        internetLayout = findViewById(R.id.interntLayout)
+        internetLayout = findViewById(R.id.internetLayout)
         noInternetLayout = findViewById(R.id.noInternetLayout)
         tryAgainButton = findViewById(R.id.try_again_button)
+
+        drawLayout()
 
         tryAgainButton.setOnClickListener {
             drawLayout()
